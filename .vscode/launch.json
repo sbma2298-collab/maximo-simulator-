@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lesson 01: Complete PM Work Order",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/01_complete_pm_workorder.py",
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Python-generated files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environment.
+.venv/
+
+# Local databases and secrets.
+*.db
+*.sqlite
+.env
+
+# IDE and operating-system noise.
+.DS_Store
