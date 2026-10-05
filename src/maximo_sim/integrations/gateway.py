@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """An API boundary that keeps external calls outside MBO business rules."""
 
 # Any supports JSON-like values in request and response dictionaries.
@@ -23,3 +25,4 @@ class FakeIntegrationGateway:
         self.calls.append((route, dict(payload)))
         # Return a small result shaped like parsed JSON.
         return {"status": "accepted", "route": route}
+

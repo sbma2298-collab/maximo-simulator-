@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Coordinates launch-point execution and persistence."""
 
 # AutomationDispatcher runs scripts registered for save events.
@@ -41,3 +43,4 @@ class SavePipeline:
         mbo.accept_changes()
         # Run after-save scripts only after persistence succeeds.
         self._dispatcher.dispatch(mbo, Event.AFTER_SAVE, self._service)
+

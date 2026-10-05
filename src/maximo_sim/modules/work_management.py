@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Factories for the Work Management learning module."""
 
 # Mbo is the runtime record implementation.
@@ -26,3 +28,4 @@ def new_work_order(wonum: str, description: str, worktype: str = "CM") -> Mbo:
             "ACTFINISH": None,
         },
     )
+

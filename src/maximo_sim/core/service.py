@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Services normally supplied by the Maximo automation-script runtime."""
 
 # datetime is the value type returned by our date service.
@@ -22,3 +24,4 @@ class Service:
     def log(self, message: str) -> None:
         # Prefix output so simulator logs are easy to recognize in a terminal.
         print(f"[maximo-sim] {message}")
+

@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Object-launch-point rule for completing preventive-maintenance work orders."""
 
 # Mbo represents the current WORKORDER record.
@@ -16,3 +18,4 @@ def set_actual_finish_for_completed_pm(mbo: Mbo, service: Service) -> None:
             if mbo.get_string("STATUS") == "COMP":
                 # Set ACTFINISH before persistence by using the runtime date service.
                 mbo.set_value("ACTFINISH", service.date())
+

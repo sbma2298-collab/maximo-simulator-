@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """A deliberately small, heavily commented simulation of a Maximo MBO."""
 
 # Any allows attributes to hold strings, datetimes, numbers, or None.
@@ -79,3 +81,4 @@ class Mbo:
     def accept_changes(self) -> None:
         # Clear all field-change markers after successful persistence.
         self._modified_fields.clear()
+

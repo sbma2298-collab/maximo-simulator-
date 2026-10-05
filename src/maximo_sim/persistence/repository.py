@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Repository contracts and an in-memory implementation."""
 
 # Any permits mixed field types in a business-object snapshot.
@@ -43,3 +45,4 @@ class InMemoryRepository:
         records = self._database.get(object_name.upper(), {}).values()
         # Return new dictionaries to protect repository state from callers.
         return [dict(record) for record in records]
+

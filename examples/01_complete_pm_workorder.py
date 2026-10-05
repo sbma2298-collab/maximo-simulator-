@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Lesson 01: change a PM work order to COMP and observe before-save processing."""
 
 # AutomationDispatcher is the local launch-point registry.
@@ -22,6 +24,7 @@ dispatcher.register("WORKORDER", Event.BEFORE_SAVE, set_actual_finish_for_comple
 # Create local persistence for this lesson run.
 repository = InMemoryRepository()
 # Create the runtime service with the real current UTC clock.
+
 service = Service()
 # Assemble all save-processing dependencies.
 pipeline = SavePipeline(dispatcher, repository, service)
@@ -35,3 +38,4 @@ pipeline.save(work_order)
 saved_work_order = repository.get("WORKORDER", "1001")
 # Print the result for inspection in the VS Code terminal.
 print(saved_work_order)
+

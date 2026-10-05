@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """A tiny cron-style batch processor for later scheduled-processing lessons."""
 
 # Callable describes a unit of scheduled work.
@@ -22,3 +24,4 @@ class CronProcessor:
         job = self._jobs[name.upper()]
         # Invoke the job exactly once; real scheduling can be added later.
         job()
+

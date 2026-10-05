@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """A small collection type for working with multiple MBO records."""
 
 # Iterator gives precise typing for iteration over records.
@@ -29,3 +31,4 @@ class MboSet:
     def __iter__(self) -> Iterator[Mbo]:
         # Return an iterator rather than exposing the private list itself.
         return iter(self._records)
+

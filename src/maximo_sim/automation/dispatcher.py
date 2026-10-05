@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Registers scripts against object events and dispatches them."""
 
 # Callable describes an automation script function.
@@ -35,3 +37,4 @@ class AutomationDispatcher:
         for script in self._scripts.get(key, []):
             # Supply the current MBO and runtime service to the script.
             script(mbo, service)
+

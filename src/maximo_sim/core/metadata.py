@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Metadata describing a simplified Maximo business object."""
 
 # Dataclass creates a small immutable-style data holder with less boilerplate.
@@ -30,3 +32,4 @@ WORKORDER_METADATA = ObjectMetadata(
     # Only fields needed by the starter lessons are allowed initially.
     attributes=frozenset({"WONUM", "DESCRIPTION", "WORKTYPE", "STATUS", "ACTFINISH"}),
 )
+

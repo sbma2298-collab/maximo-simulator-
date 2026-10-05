@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Event names used by the local launch-point dispatcher."""
 
 # Enum prevents spelling differences in event names across the project.
@@ -10,3 +12,4 @@ class Event(str, Enum):
     BEFORE_SAVE = "before_save"
     # AFTER_SAVE runs after repository persistence has completed.
     AFTER_SAVE = "after_save"
+

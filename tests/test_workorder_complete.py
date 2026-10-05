@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 """Tests for the starter WORKORDER object launch point."""
 
 # datetime supplies a fixed timestamp so the test never depends on wall-clock time.
@@ -72,3 +74,4 @@ def test_completed_non_pm_does_not_get_actual_finish():
     assert saved is not None
     # ACTFINISH stays empty because WORKTYPE was not PM.
     assert saved["ACTFINISH"] is None
+
