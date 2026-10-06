@@ -33,3 +33,12 @@ WORKORDER_METADATA = ObjectMetadata(
     attributes=frozenset({"WONUM", "DESCRIPTION", "WORKTYPE", "STATUS", "ACTFINISH"}),
 )
 
+# A deliberately small child object for relationship practice.
+WOACTIVITY_METADATA = ObjectMetadata(
+    object_name="WOACTIVITY",
+    module_name="WORK_MANAGEMENT",
+    key_attribute="TASKID",
+    attributes=frozenset(
+        {"TASKID", "WONUM", "DESCRIPTION", "STATUS"}
+    ),
+)
