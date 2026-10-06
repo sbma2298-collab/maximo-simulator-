@@ -30,7 +30,11 @@ class MaximoStyleMbo:
 
 
 def main():
-    script_path = ROOT / "maximo_scripts" / "WORKORDER_PM_COMPLETE.py"
+    script_path = (
+    ROOT / sys.argv[1]
+    if len(sys.argv) > 1
+    else ROOT / "maximo_scripts" / "WORKORDER_PM_RULES.py"
+)
 
     if not script_path.is_file():
         raise FileNotFoundError(f"Practice script not found: {script_path}")

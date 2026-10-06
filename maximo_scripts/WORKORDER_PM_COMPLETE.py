@@ -15,8 +15,7 @@ if work_type == "PM" and status == "COMP":
 
     # A completed PM work order must have a description.
     if not description or not description.strip():
-        service.error(
-            "workorder",
+        raise ValueError(
             "PM work order description is required before completion"
         )
 
